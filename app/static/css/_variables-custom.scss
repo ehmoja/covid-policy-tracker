@@ -1,0 +1,22 @@
+// Copyright Contributors to the Amundsen project.
+// SPDX-License-Identifier: Apache-2.0
+
+// This file is intentionally left blank and should be used to add new custom variables or overwrite defaults from _variables-default.scss
+
+$footer-height: 0px;
+
+$side-panel-width: 280px;
+$search-bar-width-max: 560px;
+$main-view-width-max: calc(#{$search-bar-width-max} + #{$spacer-4});
+$profile-menu-width: 264px;
+$nav-bar-width-max: calc(
+  #{$side-panel-width} + #{$search-bar-width-max} + #{$profile-menu-width} + #{$spacer-4}
+);
+$path-height: 36px;
+
+$box-rounding: 8px;
+$box-rounding-sharp: 4px;
+
+$width-rm-menu-from-nav: calc(#{$nav-bar-width-max} - 1px);
+$width-toggle-side-panel: 850px;
+$width-expand-search-bar: 600px;

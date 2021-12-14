@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "es2015", "dom", "scripthost"],
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "esnext",
+    "target": "es2015",
+    "strictNullChecks": true,
+    "jsx": "react",
+    "typeRoots": ["node_modules/@types"],
+    "allowJs": true,
+    "moduleResolution": "node",
+    "noResolve": false,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node",
+      "jest"
+    ],
+    "baseUrl": "js",
+    "paths": {
+      "components/*": ["components/*"],
+      "config/*": ["config/*"],
+      "ducks/*": ["ducks/*"],
+      "interfaces/*": ["interfaces/*"],
+      "providers/*": ["providers/*"],
+      "stories/*": ["stories/*"]
+    }
+  },
+  "exclude": ["node_modules", "**/__tests__", "**/*.spec.*"],
+  "include": ["*.ts", "*.js", ".eslintrc.js", "js/"]
+}

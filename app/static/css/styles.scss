@@ -1,0 +1,19 @@
+// Copyright Contributors to the Amundsen project.
+// SPDX-License-Identifier: Apache-2.0
+
+@import 'bootstrap-custom';
+@import 'buttons';
+@import 'fonts';
+@import 'main';
+@import 'typography';
+
+// Misc
+td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+form {
+  margin-bottom: 0;
+}

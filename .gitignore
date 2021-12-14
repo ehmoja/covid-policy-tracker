@@ -1,1 +1,8 @@
 **/*.ipynb
+
+app/.*/
+dist/
+node_modules/
+__pycache__/
+jest
+.DS_Store

@@ -1,0 +1,16 @@
+version: "3"
+services:
+  corona:
+    build:
+      context: .
+      dockerfile: hotreload.Dockerfile
+    container_name: corona
+    volumes:
+      - ./app/static:/app/static
+    ports:
+      - 1919:1919
+    networks:
+      - corona
+
+networks:
+  corona:

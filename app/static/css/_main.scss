@@ -1,0 +1,26 @@
+main {
+  width: $main-view-width-max;
+  display: flex;
+  position: relative;
+  top: $nav-bar-height;
+  left: calc(
+    (100vw - #{$nav-bar-width-max}) / 2 + #{$side-panel-width}
+  );
+  padding: $spacer-2;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+@media (max-width: $width-rm-menu-from-nav) {
+  main {
+    width: calc(100% - #{$side-panel-width});
+    left: $side-panel-width;
+  }
+}
+
+@media (max-width: $width-toggle-side-panel) {
+  main {
+    left: 0px;
+    width: 100%;
+  }
+}

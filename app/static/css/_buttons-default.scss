@@ -1,0 +1,284 @@
+// Copyright Contributors to the Amundsen project.
+// SPDX-License-Identifier: Apache-2.0
+
+@import 'variables';
+
+.btn {
+  &.btn-primary,
+  &.btn-default {
+    border-width: 2px;
+    font-weight: $font-weight-body-bold;
+    height: 46px;
+    padding: 0px;
+
+    img.icon {
+      border: none;
+      height: 18px;
+      margin: 0 4px 0 0;
+      -webkit-mask-size: 18px;
+      mask-size: 18px;
+      min-width: 18px;
+      vertical-align: top;
+      width: 18px;
+    }
+
+    &.btn-lg {
+      font-weight: $font-size-large;
+      height: 48px;
+      padding: 10px 16px;
+
+      img.icon {
+        height: 24px;
+        margin: 0 4px 0 0;
+        -webkit-mask-size: 24px;
+        mask-size: 24px;
+        min-width: 24px;
+        width: 24px;
+      }
+    }
+  }
+
+  &.btn-primary {
+    img.icon {
+      background-color: $btn-primary-color;
+    }
+
+    &:not(.disabled):hover,
+    &:not([disabled]):hover,
+    &:focus {
+      background-color: $btn-primary-bg-hover;
+      border-color: $btn-primary-border-hover;
+      outline: none;
+    }
+  }
+
+  &.btn-default {
+    img.icon {
+      background-color: $btn-default-color;
+    }
+
+    &.muted {
+      border-color: $divider;
+      color: $text-secondary;
+      padding: 0 8px;
+
+      .icon {
+        background-color: $text-secondary;
+      }
+    }
+
+    &:not(.disabled):hover,
+    &:not([disabled]):hover,
+    &:focus {
+      background-color: $btn-default-bg-hover;
+      border-color: $btn-default-border-hover;
+      outline: none;
+    }
+  }
+
+  * {
+    vertical-align: middle;
+  }
+
+  &.btn-block {
+    margin-bottom: 4px;
+  }
+
+  &.btn-flat-icon {
+    background-color: transparent;
+    border: none;
+    box-shadow: none !important;
+    color: $text-secondary;
+    padding: 0;
+    text-align: left;
+
+    &:focus,
+    &:not(.disabled):hover,
+    &:not([disabled]):hover {
+      background-color: transparent;
+      color: $brand-color-4;
+
+      .icon {
+        background-color: $brand-color-4;
+      }
+    }
+  }
+
+  &.btn-flat-icon-dark {
+    background-color: transparent;
+    border: none;
+    box-shadow: none !important;
+    color: $text-secondary;
+    padding: 0;
+    text-align: left;
+
+    &:focus,
+    &:not(.disabled):hover,
+    &:not([disabled]):hover {
+      background-color: transparent;
+      color: $text-primary;
+
+      .icon {
+        background-color: $text-primary;
+      }
+    }
+  }
+
+  &.btn-close {
+    background-color: $icon-bg;
+    border: none;
+    height: 18px;
+    margin: 4px 0 0;
+    -webkit-mask-image: url('../images/icons/Close.svg');
+    mask-image: url('../images/icons/Close.svg');
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-size: 110%;
+    mask-size: contain;
+    mask-size: 110%;
+    padding: 0;
+    width: 18px;
+
+    &:focus,
+    &:not(.disabled):hover,
+    &:not([disabled]):hover {
+      background-color: $icon-bg-dark;
+    }
+  }
+
+  &.btn-link {
+    color: $link-color;
+    text-decoration: none;
+    padding: 0 4px 0 4px;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+    }
+
+    &:focus {
+      outline: 5px auto $link-hover-color;
+      outline-offset: -2px;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: $text-secondary;
+    pointer-events: none;
+
+    &:hover {
+      color: $text-secondary;
+    }
+  }
+}
+
+.btn-form {
+  color: white;
+  font-weight: $font-weight-body-bold;
+  background: $color-font-secondary;
+  border-radius: $box-rounding;
+  border: 0px;
+  width: auto;
+  height: 36px;
+  margin-right: $spacer-1;
+  overflow: visible;
+  padding: 0px $spacer-2;
+
+  &.cancel {
+    color: $color-searchbar-font;
+    background: transparent;
+    border: 1px solid $color-searchbar-font;
+
+    &:hover {
+      color: white;
+      background: $color-font-primary-light;
+      border: 1px solid $color-font-primary-light;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+.btn-modal {
+  font-size: 16px;
+  color: white;
+  font-weight: $font-weight-body-bold;
+  background-color: $color-font-primary;
+  box-shadow: 0px 1px 1px $inbot-button-cancel-shadow;
+  border-radius: $box-rounding;
+  border: 0px;
+  height: 40px;
+  margin-left: $spacer-1;
+  padding: 0px $spacer-3;
+
+  &.delete {
+    background-color: $inbot-red;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: white;
+    opacity: 0.4;
+  }
+}
+
+.btn-inbot-form-toggle {
+  color: $color-font-secondary;
+  background: $color-bg;
+  font-weight: 600;
+  padding: 0px 12px;
+  height: 32px;
+  border-radius: $box-rounding-sharp;
+  border: 1px solid $color-font-secondary;
+
+  &:hover {
+    background: $color-font-secondary;
+    color: white;
+  }
+}
+
+.btn-inbot {
+  width: 178px;
+  height: 48px;
+  left: 296px;
+  top: 187px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px $inbot-button-enabled-shadow;
+  border: 0px;
+  border-radius: 8px;
+  color: $inbot-font-color;
+  font-weight: $font-weight-body-bold;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 16px;
+}
+
+.btn-tab {
+  color: $color-searchbar-font;
+  font-size: 14px;
+  border: 1px solid $color-searchbar-font;
+  border-radius: $box-rounding-sharp;
+  background: transparent;
+  font-weight: $font-weight-body-bold;
+  margin-left: $spacer-1;
+  height: 32px;
+
+  &:hover {
+    color: $color-font-primary-light;
+    border: 1px solid $color-font-primary-light;
+  }
+
+  &.selected {
+    color: white;
+    background: $color-font-primary-light;
+    border: 1px solid $color-font-primary-light;
+  }
+}
